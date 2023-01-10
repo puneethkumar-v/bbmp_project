@@ -99,8 +99,9 @@ git push -u origin main
 
 ## TODO:
 
-- [x] Creating a GitHub Repo
-- [x] Adding a README file
-- [x] Adding info regarding Contribution Guideline
-- [x] Starting a Django Project
-- [x] Creating a First Application inside a project called phase1
+- 09/01/2023:
+  - [x] Creating a GitHub Repo
+  - [x] Adding a README file
+  - [x] Adding info regarding Contribution Guideline
+  - [x] Starting a Django Project
+  - [x] Creating a First Application inside a project called phase1
