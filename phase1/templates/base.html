@@ -2,8 +2,48 @@
 <html>
   <head>
     <title>WEB PAGE</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"
+    />
+
+    <script
+      defer
+      async
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"
+    ></script>
   </head>
   <body>
-    {% for key in excel_data %} {{key}} {% endfor %}
+    <table border="1" id="table">
+      <thead>
+        <tr>
+          <th>Sl.No</th>
+          <th>Items</th>
+          <th>Amount Rs.</th>
+          <th>Amount Cr.</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tbody>
+        {% for key in excel_data %}
+        <tr>
+          {%for val in key%}
+          <td>{{val}}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <script>
+      console.log(DataTable());
+      $(document).ready(function () {
+        console.log("working");
+        $("#table").DataTable();
+      });
+    </script>
   </body>
 </html>
