@@ -5,19 +5,24 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"
+      href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"
     />
 
     <script
-      defer
-      async
       type="text/javascript"
-      charset="utf8"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
       src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"
     ></script>
   </head>
   <body>
-    <table border="1" id="table">
+    <table border="1" id="example" class="display">
       <thead>
         <tr>
           <th>Sl.No</th>
@@ -39,10 +44,8 @@
     </table>
 
     <script>
-      console.log(DataTable());
       $(document).ready(function () {
-        console.log("working");
-        $("#table").DataTable();
+        $("#example").DataTable();
       });
     </script>
   </body>

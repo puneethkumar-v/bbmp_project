@@ -111,3 +111,9 @@ git push -u origin main
   - [x] Experimenting with the libraries like pandas, openpyxl, to fetch the data
   - [x] Trying to analyze the data extracted from the excel sheet
   - [x] Rendering the data on the webpage
+
+- 11/01/2023:
+  - [x] Inserting Data to DB from excel sheet
+  - [x] Exploring jQuery for the Functionalities
+  - [x] Going through the Objective Documentation to understand more about the Dataset
+  - [x] ppt presentation preparation
