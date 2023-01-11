@@ -105,3 +105,9 @@ git push -u origin main
   - [x] Adding info regarding Contribution Guideline
   - [x] Starting a Django Project
   - [x] Creating a First Application inside a project called phase1
+
+* 10/01/2023:
+  - [x] Retrieving the data from excel sheet
+  - [x] Experimenting with the libraries like pandas, openpyxl, to fetch the data
+  - [x] Trying to analyze the data extracted from the excel sheet
+  - [x] Rendering the data on the webpage
