@@ -113,7 +113,14 @@ git push -u origin main
   - [x] Rendering the data on the webpage
 
 - 11/01/2023:
-  - [x] Inserting Data to DB from excel sheet
+
+  - [ ] Inserting Data to DB from excel sheet
   - [x] Exploring jQuery for the Functionalities
   - [x] Going through the Objective Documentation to understand more about the Dataset
   - [x] ppt presentation preparation
+
+- 12/01/2023:
+  - [ ] Inserting Data to DB from excel
+  - [ ] Verifying/Pre-processing the excel sheet
+  - [ ] Discussed regarding DataBase Schema design
+  - [x] PPt presentation

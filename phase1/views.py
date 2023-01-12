@@ -22,12 +22,21 @@ def home(request):
     # excel_data = data.head(10).to_json()
     # # print(data.head(10).to_dict().values())
     # # excel_data = data
-    df = pd.read_excel(
-        '/home/puneethkumarv/Documents/python-project/bbmp_project/phase1/static/package.xlsx')
-    print(df)
-    out = df.to_numpy().tolist()
-    print(out)
-    out = [tuple(elt) for elt in out]
-    print(out)
-
-    return render(request, 'base.html', {"excel_data": out})
+    # df = pd.read_excel(
+    #     '/home/puneethkumarv/Documents/python-project/bbmp_project/phase1/static/package.xlsx')
+    # print(df.columns.ravel())
+    # print(df)
+    # out = df.to_numpy().tolist()
+    # print(out)
+    # out = [tuple(elt) for elt in out]
+    # print(out)
+    excel_data_df = pd.read_excel(
+        '/home/puneethkumarv/Documents/python-project/bbmp_project/phase1/static/package.xlsx', usecols=['Sl. No.', 'Items', 'Amount, Rs.', 'Amount, Rs. Crores'])
+    print(excel_data_df)
+    cols = excel_data_df.columns.ravel()
+    data = excel_data_df.to_numpy().tolist()
+    context = {
+        "cols": cols,
+        "data": data,
+    }
+    return render(request, 'base.html', context)
