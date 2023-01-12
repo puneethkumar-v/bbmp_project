@@ -122,5 +122,5 @@ git push -u origin main
 - 12/01/2023:
   - [ ] Inserting Data to DB from excel
   - [ ] Verifying/Pre-processing the excel sheet
-  - [ ] Discussed regarding DataBase Schema design
+  - [x] Discussed regarding DataBase Schema design
   - [x] PPt presentation
