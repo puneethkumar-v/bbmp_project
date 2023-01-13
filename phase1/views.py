@@ -1,8 +1,11 @@
 from django.shortcuts import render
-import pandas as pd
+#import pandas as pd
+from .models import CostSummary
+from tablib import Dataset
+from .resources import CostSummaryResource
 
 
-def home(request):
+#def home(request):
     # f = pd.ExcelFile(
     #     '/home/puneethkumarv/Documents/python-project/bbmp_project/phase1/static/package.xlsx')
     # list_of_dfs = []
@@ -30,13 +33,22 @@ def home(request):
     # print(out)
     # out = [tuple(elt) for elt in out]
     # print(out)
-    excel_data_df = pd.read_excel(
-        '/home/puneethkumarv/Documents/python-project/bbmp_project/phase1/static/package.xlsx', usecols=['Sl. No.', 'Items', 'Amount, Rs.', 'Amount, Rs. Crores'])
-    print(excel_data_df)
-    cols = excel_data_df.columns.ravel()
-    data = excel_data_df.to_numpy().tolist()
-    context = {
-        "cols": cols,
-        "data": data,
-    }
-    return render(request, 'base.html', context)
+    def importExcel(request):
+    if request.method == 'POST':
+        cost_summary_resource=CostSummaryResource()
+        dataset = Dataset()
+        new_cost_summary = request.FILES['my_file']
+        imported_data = dataset.load(new_cost_summary.read(),format='xlsx')
+        for data in imported_data:
+            value = CostSummary(
+                data[0],
+                data[1],
+                data[2],
+                data[3]
+                
+            )
+            value.save()
+           
+
+
+    return render(request,'form.html')
